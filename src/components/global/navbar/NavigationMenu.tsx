@@ -13,123 +13,43 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { CartContext } from "@/context/CartContext";
-import { useSession } from "next-auth/react";
-import { AiOutlineShop } from "react-icons/ai";
-import { FaSpinner } from "react-icons/fa";
-import {
-  MdDashboard,
-  MdHeadset,
-  MdOutlineLabel,
-  MdOutlineShoppingCart,
-} from "react-icons/md";
-import CartSheet from "../CartSheet";
-import { Badge } from "../ui/badge";
-import { buttonVariants } from "../ui/button";
+
+const links = [
+  {
+    title: "Home",
+    description: "Home page",
+    href: "/",
+  },
+  {
+    title: "Services",
+    description: "List of services.",
+    href: "/#services",
+  },
+  {
+    title: "About",
+    description: "About procyon",
+    href: "/about",
+  },
+  {
+    title: "Contact",
+    description: "how to contact us",
+    href: "/#contact",
+  },
+];
 
 export function NavigationMenuDemo() {
-  const user = useSession();
-  const { cartCount } = React.useContext(CartContext);
-
   return (
     <NavigationMenu className="">
-      <NavigationMenuList className="gap-10 text-card-foreground">
-        <NavigationMenuItem className="text-card-foreground">
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className="text-sm">Home</NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link href="/products" legacyBehavior passHref>
-            <NavigationMenuLink className="text-sm">
-              Products
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-
-        {/* ADMIN PANEL */}
-        {user?.data?.user?.role == "admin" && (
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className={``}>Admin</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="flex flex-col gap-3 p-6 w-[500px]">
-                <Link
-                  href={"/admin/dashboard"}
-                  className={
-                    " flex items-center gap-5 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  }
-                >
-                  <div>
-                    <div className="text-base font-medium leading-none">
-                      Dashboard
-                    </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      All your controls at your fingertips
-                    </p>
-                  </div>
-                  <div className="ml-auto">
-                    <MdDashboard className={"w-8 h-8"} />
-                  </div>
-                </Link>
-                <Link
-                  href={"/admin/orders"}
-                  className={
-                    " flex items-center gap-5 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  }
-                >
-                  <div>
-                    <div className="text-base font-medium leading-none">
-                      Order
-                    </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      View orders placed by your customers
-                    </p>
-                  </div>
-                  <div className="ml-auto">
-                    <AiOutlineShop className={"w-8 h-8"} />
-                  </div>
-                </Link>
-
-                <Link
-                  href={"/admin/products"}
-                  className={
-                    " flex items-center gap-5 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                  }
-                >
-                  <div>
-                    <div className="text-base font-medium leading-none">
-                      Products
-                    </div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      Create or edit your online products
-                    </p>
-                  </div>
-                  <div className="ml-auto">
-                    <MdHeadset className={"w-8 h-8"} />
-                  </div>
-                </Link>
-              </ul>
-            </NavigationMenuContent>
+      <NavigationMenuList className="gap-10 ">
+        {links.map((link) => (
+          <NavigationMenuItem className="">
+            <Link href={link.href} legacyBehavior passHref>
+              <NavigationMenuLink className="text-sm">
+                {link.title}
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
-        )}
-
-        <CartSheet>
-          <NavigationMenuItem className="relative">
-            <NavigationMenuLink className={buttonVariants({ variant: "link" })}>
-              <MdOutlineShoppingCart
-                className={"h-8 w-8 fill-card-foreground"}
-              />
-              {cartCount || cartCount == 0 ? (
-                <Badge className="text-muted absolute top-0 right-0 bg-card-foreground w-6 h-6 text-center flex items-center justify-center">
-                  {cartCount}
-                </Badge>
-              ) : (
-                <FaSpinner className={"animate-spin"} />
-              )}
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </CartSheet>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );

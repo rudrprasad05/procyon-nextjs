@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/global/Nav";
 import Footer from "@/components/global/Footer";
+import DropDownNav from "@/components/global/navbar/DropDownNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Procyon | Home",
+  title: "Procyon",
   description:
     "Home page for Procyon Fiji. The leading experts in webdevelopment, email hosting, design, networking and computer repairs.",
   keywords:
@@ -35,7 +36,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/images/fav.png" />
       </head>
       <body>
-        <Nav />
+        <DropDownNav />
         {children}
         <Footer />
       </body>

@@ -20,23 +20,26 @@ export default function ServiceCard({
   learnMore,
 }: ServiceCardProps) {
   return (
-    <div className="services-cards service z-10">
-      <Link href={path} className="block">
-        <div>
+    <div className="z-10 relative flex items-center rounded-md bg-purple-800 p-3 overflow-clip border border-purple-500">
+      <Link href={path} className="block grow h-full">
+        <div className="w-full h-full grow flex flex-col">
           <div>
             <Image
               src={svg}
               alt=""
-              className="service-card-img"
-              width={100}
-              height={100}
+              className="w-12 h-12"
+              width={50}
+              height={50}
             />
           </div>
           <p className="text-white text-2xl font-extrabold h-min">{name}</p>
-          <p className="grow text-secondary-color mb-10 mt-6">{desc}</p>
-          <div className="h-min text-secondary-color flex" id="learn_more">
+          <p className="grow text-white/80 mb-10 mt-6">{desc}</p>
+          <div
+            className="h-min text-white/80 flex z-10 mt-auto relative"
+            id="learn_more"
+          >
             <div className="flex items-center">
-              <p>{learnMore}</p>
+              <p className="text-sm">{learnMore}</p>
               <span className="ml-2">
                 <Image
                   src="/images/svg/right-arrow.svg"

@@ -9,26 +9,16 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { User } from "@prisma/client";
 
 import React, { useContext } from "react";
-import ThemeSwitcher from "../ThemeSwitcher";
-import { signOut, useSession } from "next-auth/react";
-import { Button, buttonVariants } from "../ui/button";
-import { CartContext } from "@/context/CartContext";
 import Link from "next/link";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 interface props {
   children?: React.ReactNode;
 }
 
 const MobileNav: React.FC<props> = ({ children }) => {
-  const { clearCart } = useContext(CartContext);
-  const user = useSession();
-  const handleClick = () => {
-    clearCart();
-    signOut();
-  };
   return (
     <Sheet>
       <SheetTrigger>{children}</SheetTrigger>
@@ -54,17 +44,6 @@ const MobileNav: React.FC<props> = ({ children }) => {
         <SheetFooter className="absolute bottom-0 left-0 p-8 w-full">
           <div className="flex justify-between w-full">
             <ThemeSwitcher />
-            {user.status == "authenticated" && (
-              <Button onClick={() => handleClick()}>Signout</Button>
-            )}
-            {user.status == "unauthenticated" && (
-              <Link
-                className={buttonVariants({ variant: "default" })}
-                href={"/login"}
-              >
-                Login
-              </Link>
-            )}
           </div>
         </SheetFooter>
       </SheetContent>
