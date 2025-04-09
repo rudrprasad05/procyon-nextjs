@@ -10,7 +10,10 @@ export function ReadyToWorkWithUs() {
         </p>
         <div>
           <a href="#contact">
-            <Button className="btn text-white font-semibold tracking-wider burningBtn h-min mt-5 md:mt-0">
+            <Button
+              size={"lg"}
+              className="text-white font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
+            >
               Hire Us
             </Button>
           </a>
@@ -32,5 +35,19 @@ export function DevelopedAndDeployed() {
       </span>
       <span>Websites</span>
     </p>
+  );
+}
+
+export function TalkToUs() {
+  return (
+    <>
+      <p
+        className="text-white text-3xl md:text-5xl text-center font-extrabold mb-10"
+        id="contact"
+      >
+        Talk to Us
+      </p>
+      <div className="relative z-50">{/* <Contact /> */}</div>
+    </>
   );
 }
