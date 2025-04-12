@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Button } from "../ui/button";
 
 export function ReadyToWorkWithUs() {
@@ -45,7 +46,7 @@ export function TalkToUs() {
         className="text-white text-3xl md:text-5xl text-center font-extrabold mb-10"
         id="contact"
       >
-        Talk to Us
+        <span className="text-orange-500 italic">Interested? </span>Talk to Us
       </p>
       <div className="relative z-50">{/* <Contact /> */}</div>
     </>

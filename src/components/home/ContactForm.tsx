@@ -25,6 +25,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Check } from "lucide-react";
+import { wait } from "@/lib/utils";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -39,6 +41,7 @@ const formSchema = z.object({
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
+  honeypot: z.string().optional(),
 });
 
 export default function ContactForm() {
@@ -56,11 +59,17 @@ export default function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
+    if (values.honeypot) {
+      return;
+    }
     try {
       // Replace with your actual API endpoint
+      await wait(1000).then(() => {
+        setIsSuccess(true);
+        toast.success("Message sent successfully!");
+      });
       const response = await axios.post("/api/contact", values);
       console.log("Form submission response:", response.data);
-      setIsSuccess(true);
       form.reset();
     } catch (error) {
       console.error("Form submission error:", error);
@@ -71,35 +80,38 @@ export default function ContactForm() {
 
   return (
     <div className="w-4/5 mx-auto py-12">
-      <div className="relative flex items-center rounded-md bg-purple-800 p-3 overflow-clip border border-purple-500 mb-6">
-        <h2 className="text-xl font-medium text-white text-center w-full">
-          Contact Us
-        </h2>
-      </div>
-
       {isSuccess ? (
-        <div className="bg-green-50 border border-green-200 rounded-md p-6 text-center">
+        <div className="bg-purple-800 border border-purple-500 rounded-md p-6 text-center">
           <div className="flex justify-center mb-4">
-            <div className="rounded-full bg-green-100 p-2">
-              <Check className="h-6 w-6 text-green-600" />
+            <div className="rounded-full p-2">
+              <Check className="h-8 w-8 stroke-2 text-green-600" />
             </div>
           </div>
-          <h3 className="text-lg font-medium text-green-800">
+          <h3 className="text-lg font-medium text-white">
             Thank you for your message!
           </h3>
-          <p className="text-green-600 mt-2">
+          <p className="text-orange-500 mt-2">
             We'll get back to you as soon as possible.
           </p>
-          <Button
-            className="mt-4 bg-purple-800 hover:bg-purple-700"
-            onClick={() => setIsSuccess(false)}
-          >
-            Send another message
-          </Button>
         </div>
       ) : (
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-6 text-white"
+          >
+            <FormField
+              control={form.control}
+              name="honeypot"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input hidden {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <FormField
               control={form.control}
               name="name"
