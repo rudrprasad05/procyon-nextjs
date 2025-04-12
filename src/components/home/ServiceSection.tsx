@@ -1,5 +1,13 @@
 import ServicesCard from "@/components/global/ServiceCard";
-import { Globe, Laptop, Mail, Paintbrush, Rocket, Router } from "lucide-react";
+import {
+  Globe,
+  Laptop,
+  Mail,
+  Paintbrush,
+  Rocket,
+  Router,
+  Server,
+} from "lucide-react";
 
 export default function ServiceSection() {
   return (
@@ -16,7 +24,7 @@ export default function ServiceSection() {
       <ServicesCard
         name="Web Development"
         Icon={Globe}
-        path="/webdevelopment"
+        path="/web"
         desc="Transform Your Vision into Reality with Our Cutting-Edge Web Development Services!"
         learnMore="Our Websites"
       />
@@ -26,15 +34,15 @@ export default function ServiceSection() {
         Icon={Mail}
         path="/email"
         desc="Our secure and reliable email hosting ensures smooth communication and spam-free inboxes"
-        learnMore="Get a Custom Email"
+        learnMore="Get a company Email"
       />
 
       <ServicesCard
         name="Office Networks"
         Icon={Router}
-        path="/email"
+        path="/networks"
         desc="We design and deploy office networks that keep your team connected, productive, and secure"
-        learnMore="Get a Custom Email"
+        learnMore="Start your network"
       />
 
       <ServicesCard
@@ -46,22 +54,22 @@ export default function ServiceSection() {
       />
 
       <ServicesCard
-        name="Computer Repairs"
-        Icon={Laptop}
-        path="/repairs"
-        desc="Revive Your Digital Lifeline: Experience Unparalleled Computer Repair Services!"
-        learnMore="More on Repairs"
+        name="System Solutions"
+        Icon={Server}
+        path="/custom"
+        desc="From Inventory Management to POS and Payroll systems, we provide tailored solutions that fit your business needs"
+        learnMore="Get your custom solution"
       />
 
       <ServicesCard
         name="App Development"
         Icon={Rocket}
-        path="/appdevelopment"
-        desc="Revive Your Digital Lifeline: Experience Unparalleled Computer Repair Services!"
-        learnMore="More on Repairs"
+        path="/app"
+        desc="Reach a larger audience with our custom mobile app development services"
+        learnMore="Get your custom app"
       />
 
-      <div className="planet w-4/5 md:w-4/12 absolute -bottom-1/3 -left-1/4 z-0 blur-xs rotate-45">
+      <div className="planet w-4/5 md:w-4/12 absolute bottom-1/4 -left-1/4 z-0 blur-xs rotate-45">
         <img
           src="/images/yellow-planet.png"
           alt=""

@@ -1,9 +1,10 @@
+import { LucideIcon, MoveRight } from "lucide-react";
+import Image from "next/image";
 // components/ServiceCard.jsx
 
 import Link from "next/link";
-import Image from "next/image";
+
 import CircleDesign from "./CircleDesign";
-import { LucideIcon, MoveRight } from "lucide-react";
 
 interface ServiceCardProps {
   name: string;
@@ -22,7 +23,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div className="z-10 relative flex items-center rounded-md bg-purple-800 p-3 overflow-clip border border-purple-500">
-      <Link href={path} className="block grow h-full">
+      <Link prefetch={true} href={path} className="block grow h-full">
         <div className="w-full h-full grow flex flex-col">
           <Icon className="w-10 h-10 stroke-1 text-white" />
           <p className="text-white text-2xl z-10 font-extrabold h-min">

@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="">
           <p className="md:text-xl text-sm text-white mb-1">Quick Links</p>
 
-          <a href="/webdevelopment">
+          <a href="/web">
             <p className="footer-p">Web Development</p>
           </a>
           <a href="/design">

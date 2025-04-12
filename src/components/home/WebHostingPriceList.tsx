@@ -9,7 +9,7 @@ export default function PricingTable() {
       name: "Maintanence",
       starter: "$10 / month",
       business: "$50 / month",
-      cloud: "Pricing Differs",
+      cloud: "$100 / month",
     },
     {
       name: "Storage",
