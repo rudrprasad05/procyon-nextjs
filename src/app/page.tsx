@@ -9,6 +9,7 @@ import ContactForm from "@/components/home/ContactForm";
 import Hero from "@/components/home/Hero";
 import ServiceSection from "@/components/home/ServiceSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
+import WebHostingPriceList from "@/components/home/WebHostingPriceList";
 import { Button } from "@/components/ui/button";
 import { globalMetadata } from "@/metadata";
 // import ClientTestimonial from "@/components/ClientTestimonial";
@@ -20,8 +21,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <DevelopedAndDeployed />
       <ServiceSection />
+      <DevelopedAndDeployed />
+      <WebHostingPriceList />
       <ReadyToWorkWithUs />
       <TestimonialSection />
       <TalkToUs />
