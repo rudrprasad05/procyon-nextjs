@@ -26,7 +26,7 @@ export function ReadyToWorkWithUs() {
 export function DevelopedAndDeployed() {
   return (
     <p
-      className="text-white text-3xl md:text-5xl text-center flex gap-2 justify-center font-extrabold mt-28 md:mt-0 mb-10 md:mb-28 p-5"
+      className="text-white text-3xl md:text-5xl text-center flex gap-2 justify-center font-extrabold mt-28 md:mt-0 mb-10 md:mb-12 p-5"
       id="services"
     >
       <span> Developed and Deployed</span>

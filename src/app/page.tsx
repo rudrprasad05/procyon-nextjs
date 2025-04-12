@@ -1,16 +1,13 @@
-import ServicesCard from "@/components/global/ServiceCard";
 import {
   DevelopedAndDeployed,
   ReadyToWorkWithUs,
   TalkToUs,
 } from "@/components/home/CallToActions";
-import ClientTestimonial from "@/components/home/ClientTestimonial";
 import ContactForm from "@/components/home/ContactForm";
 import Hero from "@/components/home/Hero";
 import ServiceSection from "@/components/home/ServiceSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
-import WebHostingPriceList from "@/components/home/WebHostingPriceList";
-import { Button } from "@/components/ui/button";
+import PricingTable from "@/components/home/WebHostingPriceList";
 import { globalMetadata } from "@/metadata";
 // import ClientTestimonial from "@/components/ClientTestimonial";
 // import Contact from "@/components/Contact";
@@ -23,7 +20,7 @@ export default function Home() {
       <Hero />
       <ServiceSection />
       <DevelopedAndDeployed />
-      <WebHostingPriceList />
+      <PricingTable />
       <ReadyToWorkWithUs />
       <TestimonialSection />
       <TalkToUs />
