@@ -53,16 +53,15 @@ export function TalkToUs() {
   );
 }
 
-export function Register() {
+export function WhatWeHavetoOffer() {
   return (
     <>
       <p
         className="text-white text-3xl md:text-5xl text-center font-extrabold mb-10"
         id="contact"
       >
-        <span className="text-orange-500 italic">Interested? </span>Talk to Us
+        What We Have to Offer
       </p>
-      <div className="relative z-50">{/* <Contact /> */}</div>
     </>
   );
 }
