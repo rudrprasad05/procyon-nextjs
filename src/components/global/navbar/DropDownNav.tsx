@@ -8,7 +8,7 @@ import { Menu } from "lucide-react";
 
 const DropDownNav = () => {
   return (
-    <nav className="z-50 w-screen bg-transparent text-white">
+    <nav className="z-50 w-screen bg-transparent ">
       <main className="hidden md:flex z-50 items-center justify-between h-[15vh]  mx-auto w-4/5">
         <div className="flex items-center gap-5">
           <Image

@@ -17,6 +17,7 @@ export default function PricingTable() {
       business: "50 GB",
       cloud: "Unlimited",
     },
+
     {
       name: "Website Design",
       starter: "true",
@@ -29,11 +30,18 @@ export default function PricingTable() {
       business: "true",
       cloud: "true",
     },
+
     {
       name: "Custom Domain",
       starter: "true",
       business: "true",
       cloud: "true",
+    },
+    {
+      name: "Emails",
+      starter: "false",
+      business: "1 x 2GB",
+      cloud: "10 x 5GB",
     },
     {
       name: "SEO Optimization",

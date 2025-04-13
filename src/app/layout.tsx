@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Nav from "@/components/global/Nav";
 import Footer from "@/components/global/Footer";
 import DropDownNav from "@/components/global/navbar/DropDownNav";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,12 +36,14 @@ export default function RootLayout({
         <meta name="generator" content="Next.js" />
         <link rel="icon" type="image/png" href="/images/fav.png" />
       </head>
-      <body>
-        <DropDownNav />
-        {children}
-        <Toaster />
-        <Footer />
-      </body>
+      <ThemeProvider attribute="class" defaultTheme="dark">
+        <body>
+          <DropDownNav />
+          {children}
+          <Toaster />
+          <Footer />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

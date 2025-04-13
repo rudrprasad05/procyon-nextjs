@@ -44,7 +44,7 @@ export default function SearchBar() {
       {domains.length > 0 && (
         <div className="text-white/80 mt-3">
           Dont see a domain you like?{" "}
-          <RequestAccess name="">
+          <RequestAccess domain="">
             <span className="text-orange-500 cursor-pointer">
               Request special access
             </span>

@@ -13,6 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import ThemeSwitcherOneClick from "@/components/theme/ThemeSwitcherOneClick";
 
 const links = [
   {
@@ -55,6 +56,7 @@ export function NavigationMenuDemo() {
             </Link>
           </NavigationMenuItem>
         ))}
+        {/* <ThemeSwitcherOneClick seeName={false} /> */}
       </NavigationMenuList>
     </NavigationMenu>
   );
