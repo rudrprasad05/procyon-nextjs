@@ -21,14 +21,19 @@ const links = [
     href: "/",
   },
   {
-    title: "Services",
-    description: "List of services.",
-    href: "/#services",
+    title: "Websites",
+    description: "Get a website",
+    href: "/web",
   },
   {
-    title: "About",
-    description: "About procyon",
-    href: "/about",
+    title: "Emails",
+    description: "Get an Email",
+    href: "/emails",
+  },
+  {
+    title: "Domains",
+    description: "get a domain",
+    href: "/domains",
   },
   {
     title: "Contact",

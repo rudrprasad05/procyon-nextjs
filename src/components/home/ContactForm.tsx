@@ -15,6 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { SiInstagram } from "@icons-pack/react-simple-icons";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -24,7 +25,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Check } from "lucide-react";
+import { Check, Mail, Phone } from "lucide-react";
 import { wait } from "@/lib/utils";
 import { toast } from "sonner";
 
@@ -80,6 +81,17 @@ export default function ContactForm() {
 
   return (
     <div className="w-4/5 mx-auto py-12">
+      <div className="flex gap-3 mb-10">
+        <div className="flex gap-3 items-center text-white">
+          <Phone className="text-orange-500" /> (679) 839 7171
+        </div>
+        <div className="flex gap-3 items-center text-white">
+          <Mail className="text-orange-500" /> info@procyonfiji.com
+        </div>
+        <div className="flex gap-3 items-center text-white">
+          <SiInstagram className="text-orange-500" /> @procyonfiji
+        </div>
+      </div>
       {isSuccess ? (
         <div className="bg-purple-800 border border-purple-500 rounded-md p-6 text-center">
           <div className="flex justify-center mb-4">

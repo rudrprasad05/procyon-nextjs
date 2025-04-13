@@ -4,18 +4,13 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    // Log the form data
-    console.log("Contact form submission:", body);
-
-    const response = await fetch("http://localhost:8001/api/contact", {
+    const response = await fetch("http://localhost:8001/api/dns/all-tld", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         name: body.name,
-        email: body.email,
-        message: body.message,
       }),
     });
 
@@ -23,9 +18,13 @@ export async function POST(request: Request) {
       throw new Error("Failed to send data to backend");
     }
 
+    const data = await response.json();
+
+    console.log(data);
+
     return NextResponse.json({
       success: true,
-      message: "Form submitted successfully",
+      data,
     });
   } catch (error) {
     console.error("Error processing contact form:", error);
