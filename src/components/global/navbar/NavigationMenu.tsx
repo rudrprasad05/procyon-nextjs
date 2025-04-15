@@ -32,9 +32,14 @@ const links = [
     href: "/emails",
   },
   {
-    title: "Domains",
-    description: "get a domain",
-    href: "/domains",
+    title: "Systems",
+    description: "get a custom system",
+    href: "/custom",
+  },
+  {
+    title: "Apps",
+    description: "get a custom system",
+    href: "/apps",
   },
   {
     title: "Contact",

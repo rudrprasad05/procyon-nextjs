@@ -2,17 +2,12 @@ import Footer from "@/components/global/Footer";
 import DropDownNav from "@/components/global/navbar/DropDownNav";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Rubik } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const rubik = Rubik({
+  variable: "--font-rubik",
   subsets: ["latin"],
 });
 
@@ -37,7 +32,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/images/fav.png" />
       </head>
       <ThemeProvider attribute="class" defaultTheme="dark">
-        <body>
+        <body className={rubik.className}>
           <DropDownNav />
           {children}
           <Toaster />

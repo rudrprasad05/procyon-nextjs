@@ -25,7 +25,7 @@ export default function Hero() {
             </Link>
           </div>
           <div className="">
-            <Link href="/webdevelopment#ourwork">
+            <Link href="/web#ourwork">
               <Button className="cursor-pointer btn bg-transparent hover:burningBtn font-semibold tracking-wider border-2 border-amber-600">
                 Our Works
               </Button>

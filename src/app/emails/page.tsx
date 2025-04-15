@@ -1,16 +1,18 @@
+import EmailHeader from "@/components/emails/EmailHeader";
+import WhatWeOffer from "@/components/emails/WhatWeOffer";
 import {
   CustomSolution,
   PlansAndPrices,
   WhatWeHavetoOffer,
 } from "@/components/home/CallToActions";
-import NetworksHeader from "@/components/networks/NetworksHeader";
-import WhatWeOffer from "@/components/networks/WhatWeOffer";
+import React from "react";
 import Image from "next/image";
+import EmailHostingPriceList from "@/components/emails/EmailHostingPriceList";
 
 export default function Page() {
   return (
     <div>
-      <NetworksHeader />
+      <EmailHeader />
       <div className="relative">
         <WhatWeHavetoOffer />
         <WhatWeOffer />
@@ -27,6 +29,7 @@ export default function Page() {
         <CustomSolution />
         <div className="mb-24">
           <PlansAndPrices />
+          <EmailHostingPriceList />
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ export default function ServiceSection() {
       <ServicesCard
         name="Email Hosting"
         Icon={Mail}
-        path="/email"
+        path="/emails"
         desc="Our secure and reliable email hosting ensures smooth communication and spam-free inboxes"
         learnMore="Get a company Email"
       />
@@ -64,7 +64,7 @@ export default function ServiceSection() {
       <ServicesCard
         name="App Development"
         Icon={Rocket}
-        path="/app"
+        path="/apps"
         desc="Reach a larger audience with our custom mobile app development services"
         learnMore="Get your custom app"
       />

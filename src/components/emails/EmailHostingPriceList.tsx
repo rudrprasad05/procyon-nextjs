@@ -1,36 +1,9 @@
 "use client";
 
 import { Check, Cloud, Crown, Sparkles, X } from "lucide-react";
-import { Separator } from "../ui/separator";
 
-export default function PricingTable() {
+export default function EmailHostingPriceList() {
   const features = [
-    {
-      name: "Maintanence",
-      starter: "$10 / month",
-      business: "$50 / month",
-      cloud: "$100 / month",
-    },
-    {
-      name: "Storage",
-      starter: "5 GB",
-      business: "50 GB",
-      cloud: "100 GB",
-    },
-
-    {
-      name: "Website Design",
-      starter: "true",
-      business: "true",
-      cloud: "true",
-    },
-    {
-      name: "Responsive Layout",
-      starter: "true",
-      business: "true",
-      cloud: "true",
-    },
-
     {
       name: "Custom Domain",
       starter: "true",
@@ -38,47 +11,49 @@ export default function PricingTable() {
       cloud: "true",
     },
     {
-      name: "Emails",
-      starter: "1 x 2GB",
-      business: "1 x 5GB",
-      cloud: "10 x 5GB",
+      name: "Maximum Inboxes",
+      starter: "1",
+      business: "5",
+      cloud: "50",
+    },
+
+    {
+      name: "Extra Inbox",
+      starter: "$5 / user",
+      business: "$5 / user",
+      cloud: "$5 / user",
     },
     {
-      name: "SEO Optimization",
+      name: "Maximum Storage",
+      starter: "2 GB",
+      business: "5GB",
+      cloud: "10GB",
+    },
+    {
+      name: "Extra Storage",
+      starter: "$5 / 5GB",
+      business: "$5 / 5GB",
+      cloud: "$5 / 5GB",
+    },
+    {
+      name: "Webmail Access",
+      starter: "true",
+      business: "true",
+      cloud: "true",
+    },
+    {
+      name: "Email Forwarding",
       starter: "false",
       business: "true",
       cloud: "true",
     },
     {
-      name: "Content Management",
+      name: "Spam Protection",
       starter: "false",
       business: "true",
       cloud: "true",
     },
-    {
-      name: "SSL Certificate",
-      starter: "false",
-      business: "true",
-      cloud: "true",
-    },
-    {
-      name: "Backups",
-      starter: "false",
-      business: "Weekly",
-      cloud: "Daily",
-    },
-    {
-      name: "E-commerce Integration",
-      starter: "false",
-      business: "false",
-      cloud: "true",
-    },
-    {
-      name: "Custom API Integration",
-      starter: "false",
-      business: "false",
-      cloud: "true",
-    },
+
     {
       name: "24/7 Support",
       starter: "false",
@@ -88,13 +63,13 @@ export default function PricingTable() {
     {
       name: "Performance Monitoring",
       starter: "false",
-      business: "true",
+      business: "false",
       cloud: "true",
     },
     {
       name: "Backup & Security",
       starter: "false",
-      business: "true",
+      business: "false",
       cloud: "true",
     },
   ];
@@ -103,11 +78,7 @@ export default function PricingTable() {
     <div className="w-4/5 mx-auto py-12 text-white">
       <div className="grid grid-cols-1 md:grid-cols-4">
         {/* Features column */}
-        <div className="space-y-2 pt-18">
-          <h2 className="">
-            Development{" "}
-            <span className="text-sm text-gray-500">(one-time payment)</span>
-          </h2>
+        <div className="space-y-2 pt-28">
           <ul className="space-y-2">
             {features.map((feature) => (
               <li key={feature.name} className="h-12 flex items-center">
@@ -126,7 +97,7 @@ export default function PricingTable() {
             </div>
           </div>
           <div className="mt-2 text-center">
-            <p className="text-3xl font-bold">$299</p>
+            <p className="text-3xl font-bold">$5 / month</p>
           </div>
           <ul className="my-2 space-y-2">
             {features.map((feature) => (
@@ -152,7 +123,7 @@ export default function PricingTable() {
             </div>
           </div>
           <div className="mt-2 text-center">
-            <p className="text-3xl font-bold">$599</p>
+            <p className="text-3xl font-bold">$10 / month</p>
           </div>
           <ul className="my-2 space-y-2">
             {features.map((feature) => (
@@ -178,7 +149,7 @@ export default function PricingTable() {
             </div>
           </div>
           <div className="mt-2 text-center">
-            <p className="text-3xl font-bold">$1199</p>
+            <p className="text-3xl font-bold">$100 / month</p>
           </div>
           <ul className="my-2 space-y-2">
             {features.map((feature) => (
@@ -196,8 +167,8 @@ export default function PricingTable() {
         </div>
       </div>
       <p className="text-center text-sm mt-8 text-muted-foreground">
-        All prices listed apart from "Deposit" are in FJD / month. Billings are
-        done annually. Extra charges apply for month billings
+        All prices listed are in FJD / month. Billings are done annually. Extra
+        charges apply for month billings
       </p>
     </div>
   );

@@ -26,9 +26,7 @@ export default function ServiceCard({
       <div className="z-10 relative flex items-center rounded-md bg-purple-800 p-3 overflow-clip border border-purple-500">
         <div className="w-full h-full grow flex flex-col">
           <Icon className="w-10 h-10 stroke-1 text-white" />
-          <p className="text-white text-2xl z-10 font-extrabold h-min">
-            {name}
-          </p>
+          <p className="text-white text-2xl z-10 font-bold h-min">{name}</p>
           <p className="grow text-white/80 z-10 mb-10 mt-6">{desc}</p>
           {learnMore && (
             <div
@@ -54,9 +52,7 @@ export default function ServiceCard({
       <Link prefetch={true} href={path} className="block grow h-full">
         <div className="w-full h-full grow flex flex-col">
           <Icon className="w-10 h-10 stroke-1 text-white" />
-          <p className="text-white text-2xl z-10 font-extrabold h-min">
-            {name}
-          </p>
+          <p className="text-white text-2xl z-10 font-bold h-min">{name}</p>
           <p className="grow text-white/80 z-10 mb-10 mt-6">{desc}</p>
           <div
             className="h-min text-white/80 flex z-10 mt-auto relative"

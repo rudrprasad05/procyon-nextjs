@@ -6,16 +6,85 @@ export function ReadyToWorkWithUs() {
   return (
     <div className="w-full bg-purple-800 h-min py-5 md:py-14 mb-28">
       <div className="flex items-center flex-col md:flex-row w-4/5 bg-purple-800 h-min justify-between mx-auto">
-        <p className="text-white text-2xl md:text-4xl font-extrabold h-min">
+        <p className="text-2xl md:text-4xl font-extrabold h-min">
           <span className="italic">Ready</span> to work with us?
         </p>
         <div>
           <a href="#contact">
             <Button
               size={"lg"}
-              className="text-white font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
+              className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
             >
               Hire Us
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function GetADomain() {
+  return (
+    <div className="w-full bg-purple-800 h-min py-5 md:py-14 mb-28">
+      <div className="flex items-center flex-col md:flex-row w-4/5 bg-purple-800 h-min justify-between mx-auto">
+        <p className="text-2xl md:text-4xl font-extrabold h-min">
+          Find your{" "}
+          <span className="italic text-orange-500">Custom Domain</span>
+        </p>
+        <div>
+          <a href="/domains">
+            <Button
+              size={"lg"}
+              className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
+            >
+              Look Now
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function GetAQuote() {
+  return (
+    <div className="w-full bg-purple-800 h-min py-5 md:py-14 mb-28">
+      <div className="flex items-center flex-col md:flex-row w-4/5 bg-purple-800 h-min justify-between mx-auto">
+        <p className="text-2xl md:text-4xl font-extrabold h-min">
+          Got something in mind?{" "}
+          <span className="italic text-orange-500">Get a quote</span>
+        </p>
+        <div>
+          <a href="/domains">
+            <Button
+              size={"lg"}
+              className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
+            >
+              Request
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function CustomSolution() {
+  return (
+    <div className="w-full bg-purple-800 h-min py-5 md:py-14 mb-28">
+      <div className="flex items-center flex-col md:flex-row w-4/5 bg-purple-800 h-min justify-between mx-auto">
+        <p className="text-2xl md:text-4xl font-extrabold h-min">
+          Need a custom solution?{" "}
+          <span className="italic text-orange-500">Get a quote</span>
+        </p>
+        <div>
+          <a href="/domains">
+            <Button
+              size={"lg"}
+              className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
+            >
+              Request
             </Button>
           </a>
         </div>
@@ -27,7 +96,7 @@ export function ReadyToWorkWithUs() {
 export function DevelopedAndDeployed() {
   return (
     <p
-      className="text-white text-3xl md:text-5xl text-center flex gap-2 justify-center font-extrabold mt-28 md:mt-0 mb-10 md:mb-12 p-5"
+      className="text-3xl md:text-5xl text-center flex gap-2 justify-center font-extrabold mt-28 md:mt-0 mb-10 md:mb-12 p-5"
       id="services"
     >
       <span> Developed and Deployed</span>
@@ -43,7 +112,7 @@ export function TalkToUs() {
   return (
     <>
       <p
-        className="text-white text-3xl md:text-5xl text-center font-extrabold mb-10"
+        className="text-3xl md:text-5xl text-center font-extrabold mb-10"
         id="contact"
       >
         <span className="text-orange-500 italic">Interested? </span>Talk to Us
@@ -53,11 +122,24 @@ export function TalkToUs() {
   );
 }
 
+export function PlansAndPrices() {
+  return (
+    <>
+      <p
+        className="text-3xl md:text-5xl text-center font-extrabold mb-10"
+        id="contact"
+      >
+        Plans & Prices
+      </p>
+    </>
+  );
+}
+
 export function WhatWeHavetoOffer() {
   return (
     <>
       <p
-        className="text-white text-3xl md:text-5xl text-center font-extrabold mb-10"
+        className="text-3xl md:text-5xl text-center font-extrabold mb-10"
         id="contact"
       >
         What We Have to Offer

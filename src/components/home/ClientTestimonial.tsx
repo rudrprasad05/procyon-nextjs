@@ -14,7 +14,7 @@ export default function ClientTestimonial({
       <div className=" ">
         <img src="/images/svg/q.svg" alt="" className="w-8 h-8" />
       </div>
-      <p className="text-white text-2xl font-extrabold h-min">{name}</p>
+      <p className="text-white text-2xl font-bold h-min">{name}</p>
       <p className="grow text-white/80">{desc}</p>
 
       <div className="h-24 w-24 ml-auto mt-2 relative rounded-full overflow-clip border-2 border-purple-500">
