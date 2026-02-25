@@ -44,7 +44,7 @@ const links = [
   {
     title: "Contact",
     description: "how to contact us",
-    href: "/#contact",
+    href: "/contact",
   },
 ];
 
@@ -54,7 +54,7 @@ export function NavigationMenuDemo() {
       <NavigationMenuList className="gap-10 ">
         {links.map((link) => (
           <NavigationMenuItem className="">
-            <Link href={link.href} legacyBehavior passHref>
+            <Link prefetch href={link.href} legacyBehavior passHref>
               <NavigationMenuLink className="text-sm">
                 {link.title}
               </NavigationMenuLink>

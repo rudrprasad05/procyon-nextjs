@@ -49,7 +49,7 @@ export default function Nav() {
           <Link href="/about">About</Link>
         </li>
         <li className="md:mr-5 mt-2 md:mt-0 hover:text-procyon-pink transition">
-          <Link href="/#contact">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

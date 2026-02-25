@@ -18,7 +18,7 @@ export default function Hero() {
         </p>
         <div className="flex md:flex-row flex-row h-min w-max">
           <div className="">
-            <Link href="#contact">
+            <Link href="/contact">
               <Button className="cursor-pointer btn font-semibold tracking-wider burningBtn mr-5 md:mb-0 mb-2">
                 Free Consultation
               </Button>

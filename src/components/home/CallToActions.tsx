@@ -10,7 +10,7 @@ export function ReadyToWorkWithUs() {
           <span className="italic">Ready</span> to work with us?
         </p>
         <div>
-          <a href="#contact">
+          <a href="/contact">
             <Button
               size={"lg"}
               className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
@@ -85,6 +85,52 @@ export function CustomSolution() {
               className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
             >
               Request
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function LookingForANework() {
+  return (
+    <div className="w-full bg-purple-800 h-min py-5 md:py-14 mb-28">
+      <div className="flex items-center flex-col md:flex-row w-4/5 bg-purple-800 h-min justify-between mx-auto">
+        <p className="text-2xl md:text-4xl font-extrabold h-min">
+          Looking for an office Network?{" "}
+          <span className="italic text-orange-500">Get a quote</span>
+        </p>
+        <div>
+          <a href="/domains">
+            <Button
+              size={"lg"}
+              className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
+            >
+              Quote
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function CustomPrices() {
+  return (
+    <div className="w-full bg-purple-800 h-min py-5 md:py-14 mb-28 z-10">
+      <div className="flex items-center flex-col md:flex-row w-4/5 bg-purple-800 h-min justify-between mx-auto">
+        <p className="text-2xl md:text-4xl font-extrabold h-min">
+          Get the best deal for your dollar.
+          <span className="italic text-orange-500">Get a quote</span>
+        </p>
+        <div>
+          <a href="/contact">
+            <Button
+              size={"lg"}
+              className="font-semibold cursor-pointer tracking-wider burningBtn text-xl mt-5 md:mt-0"
+            >
+              Quote
             </Button>
           </a>
         </div>
